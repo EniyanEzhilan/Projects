@@ -1,0 +1,26 @@
+FUNCTIONS TO REMEMBER:
+
+LET THE DATAFRAME BE df
+
+1.)r"D:\Jupyter\Projects\Datasets\US_Stock_Market_Dataset.csv"
+          ->why do we use 'r' here? it is to get rid of the error :The “Unicode Error: ‘unicodeescape’ codec can’t decode bytes” occurs when Python’s Unicode decoder encounters an invalid Unicode escape sequence in a string. 
+          ->The backslashes in the Windows file path should be escaped to avoid interpreting them as escape sequences. Using backslashes in strings without properly escaping them or forming valid Unicode escape sequences can trigger this error.
+          ->Utilize raw strings by prefixing string literals with ‘r’, which treats backslashes as literal characters and prevents Python from interpreting them as escape sequences.
+
+2.)TO DROP COLUMN:
+   df.drop(columns=["Unnamed: 0"], inplace = True)
+   inplace = Ture is used to permanently change the
+
+3.)FIND EMPTY CELLS
+   data_frame.isnull().sum()
+
+4.)IMPORT AND THEIR USE CASES
+import re -  stands for "regular expression", which are a powerful tool for matching patterns in strings.
+from nltk.corpus import stopwords - used in Python to import the stopwords module from the nltk.corpus package, which is part of the Natural Language Toolkit                                        (NLTK). NLTK is a leading platform for building Python programs to work with human language data (natural language                                               processing).Stopwords are common words in a language that are often filtered out before processing text. These words are                                         usually insignificant in determining the meaning or context of a text, such as "and", "the", "is", "in", "at", etc.                                              Removing stopwords is a common preprocessing step in text analysis and natural language processing (NLP) to reduce the                                           dimensionality of the data and focus on the more meaningful words.
+from sklearn.feature_extraction.text import TfidfVectorizer - used to import the TfidfVectorizer class from the sklearn.feature_extraction.text module in the                                       scikit-learn library. Scikit-learn is a widely used machine learning library in Python, and TfidfVectorizer is a tool                                            within this library for transforming text data into numerical features. 
+from sklearn.model_selection import train_test_split - splits array or matrices into random subsets.
+from sklearn.linear_model import LogisticRegression - 
+from sklearn.metrics import accuracy_score
+
+
+   
